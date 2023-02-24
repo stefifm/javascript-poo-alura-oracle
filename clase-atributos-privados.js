@@ -18,23 +18,31 @@ class CuentaCorriente {
   }
 
   depositoCuenta (valor) {
-    if (valor > 0) {
-      this.#saldoCuenta += valor
-    }
+    if (valor > 0) { this.#saldoCuenta += valor }
+    return this.#saldoCuenta
   }
 
   retirarCuenta (valor) {
-    if (valor <= this.#saldoCuenta) {
-      this.#saldoCuenta -= valor
-    }
+    if (valor <= this.#saldoCuenta) { this.#saldoCuenta -= valor }
+    return this.#saldoCuenta
+  }
+
+  mostrarSaldo () {
+    return this.#saldoCuenta
   }
 }
 
 const cuentaLeondardo = new CuentaCorriente()
 
-cuentaLeondardo.depositoCuenta(5000)
-console.log(cuentaLeondardo)
-cuentaLeondardo.retirarCuenta(5000)
-console.log(cuentaLeondardo)
-cuentaLeondardo.depositoCuenta(-100)
-console.log(cuentaLeondardo)
+let saldo = cuentaLeondardo.mostrarSaldo()
+
+console.log(`El saldo actual es de $ ${saldo}`)
+
+saldo = cuentaLeondardo.depositoCuenta(5000)
+console.log(`El saldo actual es de $ ${saldo}`)
+
+saldo = cuentaLeondardo.retirarCuenta(5000)
+console.log(`El saldo actual es de $ ${saldo}`)
+
+saldo = cuentaLeondardo.depositoCuenta(1000)
+console.log(`El saldo actual es de $ ${saldo}`)
