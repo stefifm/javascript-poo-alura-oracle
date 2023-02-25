@@ -1,12 +1,14 @@
 class CuentaCorriente {
+  cliente
   numeroCuenta
-  #saldoCuenta
   agencia
+  #saldoCuenta
 
   constructor () {
-    this.#saldoCuenta = 0
+    this.cliente = null
     this.numeroCuenta = ''
     this.agencia = ''
+    this.#saldoCuenta = 0
   }
 
   depositoCuenta (valor) {
@@ -21,6 +23,11 @@ class CuentaCorriente {
 
   mostrarSaldo () {
     return this.#saldoCuenta
+  }
+
+  transferirParaCuenta (valor, cuentaDestino) {
+    this.retirarCuenta(valor)
+    cuentaDestino.depositoCuenta(valor)
   }
 }
 
