@@ -1,4 +1,15 @@
 {
+  "name": "cuentascorrientesbancopopular",
+  "version": "1.0.0",
+  "description": "Gestión de Cuentas Corrientes del Banco Popular",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Stefania Bruera",
+  "license": "ISC",
   "devDependencies": {
     "standard": "^17.0.0"
   },
