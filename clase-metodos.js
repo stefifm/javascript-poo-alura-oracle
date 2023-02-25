@@ -1,18 +1,5 @@
-class Cliente {
-  nombreCliente
-  dniCliente
-  rutCliente
-}
-
-class CuentaCorriente {
-  numeroCuenta
-  saldoCuenta
-  agencia
-
-  depositoCuenta (valor) {
-    this.saldoCuenta += valor
-  }
-}
+import Cliente from './Cliente.js'
+import CuentaCorriente from './CuentaCorriente.js'
 
 const cliente1 = new Cliente()
 
