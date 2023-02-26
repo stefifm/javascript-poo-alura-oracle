@@ -5,6 +5,7 @@ class CuentaCorriente {
   numeroCuenta
   agencia
   #saldoCuenta
+  static cantidadCuentas = 0
 
   set setCliente (valor) {
     if (valor instanceof Cliente) {
@@ -21,6 +22,7 @@ class CuentaCorriente {
     this.numeroCuenta = numeroCuenta
     this.agencia = agencia
     this.#saldoCuenta = 0
+    CuentaCorriente.cantidadCuentas++
   }
 
   depositoCuenta (valor) {

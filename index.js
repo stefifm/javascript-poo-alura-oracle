@@ -24,6 +24,11 @@ console.log('\n MOSTRAR CLIENTE\n')
 console.log(cuentaMaria.getCliente)
 console.log(cuentaLeondardo.getCliente)
 
+/* CONTANDO CUENTAS */
+
+console.log('\n CONTANDO CUENTAS\n')
+console.log(CuentaCorriente.cantidadCuentas)
+
 /* TRANSFERENCIA */
 
 console.log('\nTRANSFERENCIAS\n')
