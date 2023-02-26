@@ -1,44 +1,35 @@
 import CuentaCorriente from './CuentaCorriente.js'
 import Cliente from './Cliente.js'
 
-const cuentaLeondardo = new CuentaCorriente()
-const cliente = new Cliente()
+/* CREANDO OBJETO CLIENTE */
 
-cliente.nombreCliente = 'Leonardo'
-cliente.dniCliente = '123456789'
-cliente.rutCliente = '1001'
+const cliente = new Cliente('Leonardo', '123456789', '1001')
+const cliente2 = new Cliente('Maria', '30539530', '1002')
 
-cuentaLeondardo.numeroCuenta = '1'
-cuentaLeondardo.agencia = '001'
-cuentaLeondardo.cliente = cliente
+/* CREANDO OBJETO CUENTA CORRIENTE */
+const cuentaLeondardo = new CuentaCorriente(cliente, '1', '001')
+const cuentaMaria = new CuentaCorriente(cliente2, '2', '002')
 
+/* OPERACIÓN DE MOSTRAR SALDO, DEPOSITO Y RETIRO DE DINERO DE CUENTA */
 let saldo = cuentaLeondardo.mostrarSaldo()
 
 saldo = cuentaLeondardo.depositoCuenta(5000)
 console.log(`El saldo actual de (cuentaLeonardo) $ ${saldo}`)
+saldo = cuentaLeondardo.retirarCuenta(200)
+console.log(`El saldo actual de (cuentaLeonardo) $ ${saldo}`)
 
-const cuentaMaria = new CuentaCorriente()
-const clienteMaria = new Cliente()
+/* MOSTRANDO CLIENTE */
 
-clienteMaria.nombreCliente = 'Maria'
-clienteMaria.dniCliente = '30539530'
-clienteMaria.rutCliente = '1002'
-
-cuentaMaria.numeroCuenta = '2'
-cuentaMaria.agencia = '002'
-cuentaMaria.setCliente = clienteMaria
-
+console.log('\n MOSTRAR CLIENTE\n')
 console.log(cuentaMaria.getCliente)
+console.log(cuentaLeondardo.getCliente)
 
-cuentaMaria.cliente = 0
+/* TRANSFERENCIA */
 
-console.log(cuentaMaria.getCliente)
-/**
+console.log('\nTRANSFERENCIAS\n')
 
 cuentaLeondardo.transferirParaCuenta(100, cuentaMaria)
-
 const saldoMaria = cuentaMaria.mostrarSaldo()
-console.log(`El saldo actual es de (cuentaMaria) $ ${saldoMaria}`)
+console.log(`\nEl saldo actual es de (cuentaMaria) $ ${saldoMaria}`)
 const saldoLeonardo = cuentaLeondardo.mostrarSaldo()
-console.log(`El saldo actual es de (cuentaLeonardo) $ ${saldoLeonardo}`)
-*/
+console.log(`\nEl saldo actual es de (cuentaLeonardo) $ ${saldoLeonardo}`)

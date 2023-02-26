@@ -16,10 +16,10 @@ class CuentaCorriente {
     return this.#cliente
   }
 
-  constructor () {
-    this.#cliente = null
-    this.numeroCuenta = ''
-    this.agencia = ''
+  constructor (cliente, numeroCuenta, agencia) {
+    this.setCliente = cliente
+    this.numeroCuenta = numeroCuenta
+    this.agencia = agencia
     this.#saldoCuenta = 0
   }
 
