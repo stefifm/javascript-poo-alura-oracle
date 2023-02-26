@@ -16,6 +16,9 @@
   "eslintConfig": {
     "extends": [
       "standard"
-    ]
+    ], 
+    "rules": {
+      "accessor-pairs":"off"
+    }
   }
 }
