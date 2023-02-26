@@ -1,11 +1,23 @@
+import Cliente from './Cliente.js'
+
 class CuentaCorriente {
-  cliente
+  #cliente
   numeroCuenta
   agencia
   #saldoCuenta
 
+  set setCliente (valor) {
+    if (valor instanceof Cliente) {
+      this.#cliente = valor
+    }
+  }
+
+  get getCliente () {
+    return this.#cliente
+  }
+
   constructor () {
-    this.cliente = null
+    this.#cliente = null
     this.numeroCuenta = ''
     this.agencia = ''
     this.#saldoCuenta = 0

@@ -26,7 +26,14 @@ clienteMaria.rutCliente = '1002'
 
 cuentaMaria.numeroCuenta = '2'
 cuentaMaria.agencia = '002'
-cuentaMaria.cliente = clienteMaria
+cuentaMaria.setCliente = clienteMaria
+
+console.log(cuentaMaria.getCliente)
+
+cuentaMaria.cliente = 0
+
+console.log(cuentaMaria.getCliente)
+/**
 
 cuentaLeondardo.transferirParaCuenta(100, cuentaMaria)
 
@@ -34,3 +41,4 @@ const saldoMaria = cuentaMaria.mostrarSaldo()
 console.log(`El saldo actual es de (cuentaMaria) $ ${saldoMaria}`)
 const saldoLeonardo = cuentaLeondardo.mostrarSaldo()
 console.log(`El saldo actual es de (cuentaLeonardo) $ ${saldoLeonardo}`)
+*/
