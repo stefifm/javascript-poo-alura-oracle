@@ -30,6 +30,6 @@ console.log('\nTRANSFERENCIAS\n')
 
 cuentaLeondardo.transferirParaCuenta(100, cuentaMaria)
 const saldoMaria = cuentaMaria.mostrarSaldo()
-console.log(`\nEl saldo actual es de (cuentaMaria) $ ${saldoMaria}`)
+console.log(`\nEl saldo actual de (cuentaMaria) es $ ${saldoMaria}`)
 const saldoLeonardo = cuentaLeondardo.mostrarSaldo()
-console.log(`\nEl saldo actual es de (cuentaLeonardo) $ ${saldoLeonardo}`)
+console.log(`\nEl saldo actual de (cuentaLeonardo) es $ ${saldoLeonardo}`)
