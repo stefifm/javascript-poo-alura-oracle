@@ -1,6 +1,10 @@
 import CuentaCorriente from './CuentaCorriente.js'
 
+/* CREANDO OBJETO CUENTA CORRIENTE */
+
 const cuentaLeondardo = new CuentaCorriente()
+
+/* OPERACIÓN DE MOSTRAR SALDO, DEPOSITO Y RETIRO DE DINERO DE CUENTA */
 
 let saldo = cuentaLeondardo.mostrarSaldo()
 
